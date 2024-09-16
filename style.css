@@ -1,0 +1,227 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; 
+    margin: 0;
+    background-color: #333;
+    height: 100vh; 
+    padding: 0; 
+}
+
+.heading {
+    font-size: xx-large;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: bolder;
+    color: goldenrod;
+    margin-bottom: -10px; 
+    margin-top: -20px;
+    transition: text-shadow 0.3s ease-out, transform 0.3s ease-out;
+}
+
+.heading:hover {
+    text-shadow: 0 0 10px rgba(157, 178, 48, 0.8), 0 0 20px rgba(154, 195, 8, 0.6);
+    transform: scale(1.05);
+}
+.operation {
+    display: grid;
+    gap: 10px;
+    background-color: black;
+    border: 6px solid white;
+    grid-template-columns: repeat(4, 1fr); 
+    grid-template-rows: auto repeat(5, 1fr); 
+    width: 510px;
+    height: 560px;
+    margin: 0 auto; 
+}
+
+.operation > div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background-color: #444; 
+    color: darkgoldenrod; 
+    font-size: large;  
+    border: 2px solid darkgoldenrod; 
+    transition: background-color 0.3s ease, color 0.3s ease; 
+}
+.num7 { grid-area: 2/1/3/2; margin-left: 6px;}
+.num8 { grid-area: 2/2/3/3; }
+.num9 { grid-area: 2/3/3/4; }
+.Add { grid-area: 2/4/3/5; width: 110px; }
+.Subtract { grid-area: 3/4/4/5; width: 110px; }
+.num4 { grid-area: 3/1/4/2; margin-left: 6px; }
+.num5 { grid-area: 3/2/4/3; }
+.num6 { grid-area: 3/3/4/4; }
+.num1 { grid-area: 4/1/5/2; margin-left: 6px; }
+.num2 { grid-area: 4/2/5/3; }
+.num3 { grid-area: 4/3/5/4; }
+.multiply { grid-area: 4/4/5/5; width: 110px; }
+.num0 { grid-area: 5/2/6/3; width: 116px; }
+.Division { grid-area: 5/4/6/5; width: 110px; }
+.Modulus { grid-area: 6/4/7/5; height: 74px; width: 110px; }
+.Dot { grid-area: 5/3/6/4; }
+.Clear { grid-area: 6/1/7/2; height: 74px; margin-left: 6px; }
+.equal { grid-area: 6/2/7/4; background-color: darkgoldenrod; color: white; border-radius: 12px; height: 74px; border: 2px solid rgb(0, 242, 255); }
+.Power { grid-area: 5/1/6/2; margin-left: 6px; }
+
+.operation .Clear{
+    background-color: rgb(255, 0, 0);
+    color: black;
+    font-weight: 900;
+    font-size: large;
+    border: 3px solid darkgoldenrod; 
+}
+
+.operation .num7{
+    color: black;
+    font-weight: 900;
+    font-size: x-large;
+}
+
+.operation .num8{
+    color: black;
+    font-weight: 900;
+    font-size: x-large;
+}
+
+.operation .num9{
+    color: black;
+    font-weight: 900;
+    font-size: x-large;
+}
+
+.operation .num4{
+    color: black;
+    font-weight: 900;
+    font-size: x-large;
+}
+
+.operation .num5{
+    color: black;
+    font-weight: 900;
+    font-size: x-large;
+}
+
+.operation .num6{
+    color: black;
+    font-weight: 900;
+    font-size: x-large;
+}
+
+.operation .num3{
+    color: black;
+    font-weight: 900;
+    font-size: x-large;
+}
+
+.operation .num2{
+    color: black;
+    font-weight: 900;
+    font-size: x-large;
+}
+
+.operation .num1{
+    color: black;
+    font-weight: 900;
+    font-size: x-large;
+}
+
+.operation .num0{
+    color: black;
+    font-weight: 900;
+    font-size: x-large;
+}
+
+.operation .Dot{
+    color: black;
+    font-weight: 900;
+    font-size: x-large;
+}
+
+.operation .Power{
+    color: black;
+    font-weight: 900;
+    font-size: x-large;
+}
+
+.operation .Division{
+    color: black;
+    font-weight: 900;
+    font-size: x-large;
+}
+
+.operation .Add{
+    color: black;
+    font-weight: 900;
+    font-size: x-large;
+}
+
+.operation .Subtract{
+    color: black;
+    font-weight: 900;
+    font-size: x-large;
+}
+
+.operation .Modulus{
+    color: black;
+    font-weight: 900;
+    font-size: x-large;
+}
+
+.operation .multiply{
+    color: black;
+    font-weight: 900;
+    font-size: x-large;
+}
+.operation .equal{
+    background-color: darkgreen;
+    color: black;
+    font-weight: 900;
+    font-size: x-large;
+}
+.result {
+    position: relative;
+    grid-area: 1/1/2/5;
+    background-color: #444;
+    color: #FFDDC1; 
+    font-size: xx-large;
+    padding: 10px;
+    height: 80px;
+    width: 475px;
+    border: 3px solid darkgoldenrod;
+    margin-left: 6px;
+    margin-top: 6px;
+    text-align: right; 
+    display: flex;  
+    justify-content: flex-end;
+    align-items: center;
+    border-radius: 12px; 
+    overflow: hidden; 
+}
+.operation .result{
+    color: black ;
+}
+.result span {
+    position: absolute;
+    top: 30%;
+    right: 2%;
+    padding: 5px;
+}
+@media (max-width: 600px) {
+    .operation {
+        width: 90vw;
+        height: auto;
+        grid-template-columns: repeat(4, 1fr); 
+    }
+
+    .result {
+        width: 90vw;
+    }
+
+    .operation > div {
+        font-size: medium; 
+        padding: 5px; 
+    }
+}
